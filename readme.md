@@ -19,7 +19,7 @@ This project requires Python 3.10 and Conda.
 
 2. Navigate to the project directory:
     ```
-    cd template_tool
+    cd PromptTools
     ```
 
 3. Create a new Conda environment:
