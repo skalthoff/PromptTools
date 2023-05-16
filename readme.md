@@ -14,9 +14,8 @@ This project requires Python 3.10 and Conda.
 
 1. Clone this repository:
     ```
-    git clone https://github.com/<your_username>/template_tool.git
+    git clone https://github.com/skalthoff/PromptTools.git
     ```
-    Replace `<your_username>` with your GitHub username.
 
 2. Navigate to the project directory:
     ```
@@ -25,12 +24,12 @@ This project requires Python 3.10 and Conda.
 
 3. Create a new Conda environment:
     ```
-    conda create --name template_tool python=3.10
+    conda create --name promptTools python=3.10
     ```
 
 4. Activate the Conda environment:
     ```
-    conda activate template_tool
+    conda activate promptTools
     ```
 
 5. Install Flask:
