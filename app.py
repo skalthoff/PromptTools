@@ -16,6 +16,9 @@ class Template:
         self.format_string = format_string
 
     def get_title(self):
+        """
+        Returns the title of the template.
+        """
         return self.title
 
 
