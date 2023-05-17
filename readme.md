@@ -1,63 +1,68 @@
-# Template Tool
+# PromptTools
 
-This is a simple Flask application that allows users to select from a set of predefined templates, fill in their content, and generate formatted text output. 
+PromptTools is a Flask web application that allows users to select a predefined template and fill in the fields to generate formatted output. This tool is helpful in generating text according to predefined templates.
 
-## Getting Started
+## Installation and Setup
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Follow the below instructions to install and setup this project on your local machine:
 
-### Prerequisites
+1. Clone the repository from GitHub.
 
-This project requires Python 3.10 and Conda. 
-
-### Installation
-
-1. Clone this repository:
-    ```
-    git clone https://github.com/skalthoff/PromptTools.git
-    ```
-
-2. Navigate to the project directory:
-    ```
-    cd PromptTools
-    ```
-
-3. Create a new Conda environment:
-    ```
-    conda create --name promptTools python=3.10
-    ```
-
-4. Activate the Conda environment:
-    ```
-    conda activate promptTools
-    ```
-
-5. Install Flask:
-    ```
-    pip install flask
-    ```
-
-## Usage
-
-To start the application, simply run:
+```bash
+git clone https://github.com/skalthoff/PromptTools.git
 ```
+
+2. Navigate to the project directory.
+
+```bash
+cd PromptTools
+```
+
+3. Create a virtual environment.
+
+```bash
+python3.10 -m venv venv
+```
+
+4. Activate the virtual environment.
+
+On Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+On Unix or MacOS:
+
+```bash
+source venv/bin/activate
+```
+
+5. Install the required packages.
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+You can run the application with the following command:
+
+```bash
 python app.py
 ```
 
-Then, open your web browser and go to `http://localhost:5000`. You will see a form with a dropdown menu to select a template and text boxes to fill in the template's fields. 
+Once the server is running, open a web browser and navigate to `http://localhost:5000` to use the application.
 
-After submitting the form, you will see the generated output based on your input. You can copy this output and use it as needed.
+## Adding New Templates
 
-## Adding More Templates
+New templates can be added by modifying the `app.py` file. Templates are defined as instances of the `Template` class, which takes a title, a list of fields, and a format string as arguments. The format string should include placeholders (in `{}` brackets) for each field.
 
-To add more templates, modify the `templates` list in `app.py`. For each template, you need to specify a title, a list of field names, and a format string. The format string should contain one `{}` placeholder for each field.
+Once a new template is added to the `templates` list in `app.py`, it will automatically be available in the application.
 
-Here is an example of how to define a template:
+## License
 
-```python
-Template(
-    "Template Title",
-    ['Field 1', 'Field 2', 'Field 3'],
-    "This is the format string with placeholders for {}, {}, and {}."
-)
+This project is licensed under the terms of the MIT license.
 ```
+
+Please replace `"MIT license"` with the actual license of your project, if it's not MIT. This README includes instructions for cloning the repository, setting up a virtual environment with Python 3.10, installing the required packages, running the application, and adding new templates.
